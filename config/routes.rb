@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
+  get 'users/show'
+
  get "home" => 'posts#home',as: 'home'
  get "posts" => 'posts#index',as: 'posts'
  post "posts" => 'posts#create'
@@ -12,11 +16,17 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  
+  
+  post "friendship" => 'friendship#create'
+  get "friendship/:id"=> 'friendship#show',as: 'friend'
+  get "friendship/:id/delete" =>'friendship#destroy',as: 'delete_friend'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'posts#index'
+  root 'users#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -23,10 +23,13 @@
 </p>
 <p>
   <%= f.label :Post_Type %><br>
-  <%= f.select(:type,[["Default","1"],["Public","2"],["Protected","3"],["Private","4"]]) %>  
+  <%= f.select(:type,[["Default","Default"],["Public","Public"],["Only Me","Only Me"],["Friends","Friends"]]) %>  
 </p>
 <p>
  <%= f.submit %>
 </p>    
 <% end %>
 <%= link_to 'Back', posts_path %>
+
+<%= link_to "Home",home_path %>
+<%= link_to "All User Post",posts_path %>
