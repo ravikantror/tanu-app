@@ -2,19 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_edit_post.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/index.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_show_post.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/show.js.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_post.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/home.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/show.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/edit.js.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/edit.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/controllers/posts_controller.rb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_index_post.html.erb</file>
-            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/new.html.erb</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
