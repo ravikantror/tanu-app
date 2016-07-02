@@ -1,0 +1,35 @@
+<h1>Editing Posts</h1>
+
+ <%= form_for @post,:url => post_path(@post),method: :post,:remote=> true do |s| %>
+ 
+ <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %> prohibited
+        this value from being saved:
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<p>
+  <%= s.label :Name %><br>
+  <%= s.text_field:name %>
+</p>
+
+<p>
+  <%= s.label :Description %><br>
+  <%= s.text_area:des %>
+</p>
+<p>
+  <%= s.label :Post_Type %><br>
+  <%= s.select(:type,[["Default","Default"],["Public","Public"],["Only Me","Only Me"],["Friends","Friends"]]) %>  
+</p>
+<p>
+ <%= s.submit:UpdatePosts %>
+</p>    
+<% end %>
+

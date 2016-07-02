@@ -17,13 +17,12 @@
         <td><%= post.user_id %></td>
         <td><%= post.des %></td>
         <td><%= post.type %></td>
-        <td><%= link_to 'Show',post_path(post) %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post_path(post),
-              method: :delete,
+        <td><%= link_to 'Show',post_path(post),:remote =>true %></td>
+        <td><%= link_to 'Edit', edit_post_path(post),:remote =>true %></td>
+        <td><%= link_to 'Destroy', post_path(post),:remote =>true,
               data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path ,:remote =>true%>

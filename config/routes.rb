@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
- get "home" => 'posts#home',as: 'home'
+ get "home" => 'posts#index',as: 'home'
  get "posts" => 'posts#index',as: 'posts'
  post "posts" => 'posts#create'
  get "posts/new" => 'posts#new',as: 'new_post'
  get "posts/:id"=> 'posts#show',as: 'post' 
  get "posts/:id/edit"=> 'posts#edit',as: 'edit_post'
- post "posts/:id" => 'posts#update'
+ post "posts/:id" => 'posts#update' ,as: 'update'
  get "posts/:id/delete" =>'posts#destroy',as: 'delete_post'
  
  
@@ -26,8 +26,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
-
+  #root 'users#index'
+   root 'posts#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

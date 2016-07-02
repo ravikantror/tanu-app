@@ -1,47 +1,72 @@
 class PostsController < ApplicationController
-  def home
-    @posts = current_user.posts
-  end
+  #respond_to :html
+  #respond_to :js
+  #def home
+    #@posts = current_user.posts
+  #end
   def index
-    @posts=Post.all
+    if params[:_method].present?
+      @posts=current_user.posts
+    else
+      @posts=Post.all
+    end
+    #@post = Post.new
+    #respond_to do |format|
+      #format.html
+      #format.js
+    #end
+    #respond_with(@posts)
   end
   def show
     @post=Post.find(params[:id])
+    #respond_to do |format|
+      #format.html
+      #format.js
+    #end
   end
   def new
     @post=Post.new
+    #respond_to do |format|
+      #format.html
+      #format.js
+    #end
   end
-  def edit
-  @post=Post.find(params[:id])
-  end
+  
   def create
-  @post=current_user.posts.new(post_params)
-  if @post.save
-  redirect_to controller: 'posts', action: 'index'
-  else
-    render 'posts/new'
+    @post=current_user.posts.new(post_params)
+    #respond_to do |format|
+     @post.save
+    #format.html 
+    #redirect_to posts_path
+    #format.js
+    @posts=Post.all
+     #format.html { render :action => "new" } 
+     #render 'posts/new'
+    end
+ #end 
+
+    def edit
+      @post=Post.find(params[:id])
   end
- end
- 
   def update
-  @post=current_user.posts.find(params[:id])
- 
-  if @post.update(post_params)
-    redirect_to controller: 'posts', action: 'show'
-  else
-    render 'posts/:id/edit'
+    @post=current_user.posts.find(params[:id])
+
+    @post.update(post_params)
+      #redirect_to posts_path
+    @posts=Post.all
+     # render 'posts/:id/edit'
+    
   end
- end
- 
   def destroy
     @post=current_user.posts.find(params[:id])
     @post.destroy
-    redirect_to controller: 'posts' ,action: 'index'
+    @posts=Post.all
+    #redirect_to @post
   end
   
   private
   def post_params
-    params.require(:post).permit(:name,:des,:type)
+    params.require(:post).permit(:name,:des,:type,:post_id)
   end
 end 
 
