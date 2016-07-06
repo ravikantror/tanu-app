@@ -45,8 +45,8 @@ class PostsController < ApplicationController
     end
  #end 
 
-    def edit
-      @post=Post.find(params[:id])
+  def edit
+    @post=Post.find(params[:id])
   end
   def update
     @post=current_user.posts.find(params[:id])
@@ -54,6 +54,7 @@ class PostsController < ApplicationController
     @post.update(post_params)
       #redirect_to posts_path
     @posts=Post.all
+    #where(:user_id=>current_user.id)
      # render 'posts/:id/edit'
     
   end

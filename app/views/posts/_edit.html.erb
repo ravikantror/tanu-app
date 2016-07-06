@@ -1,0 +1,31 @@
+
+<tbody> 
+   <%= form_for :post, url: post_path(@post), method: :post, :remote => true do |f| %>
+ <tr class = 'row', id = "row-<%=@post.id%>" >
+ 
+  <td>
+     <%= f.text_field:name %>
+    
+  </td>
+
+   <td>
+    <%= f.text_area:des %>
+  </td>
+  
+      <td>
+     <%= f.select(:type,[["Default","Default"],["Public","Public"],["Only Me","Only Me"],["Friends","Friends"]]) %>  
+  </td>
+      
+ 
+   <td>
+     <%= f.submit:UpdatePosts %>
+   </td>
+    
+  </tr>
+  <% end %>
+</tbody> 
+
+
+  
+  
+ 

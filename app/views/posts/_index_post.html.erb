@@ -1,4 +1,6 @@
 <%= link_to 'Logout',destroy_user_session_path,:method => :delete %>
+
+<%#*<div class="container">%>
 <h1>All Users Posts</h1>
 <table id="posts">
   <thead>
@@ -13,7 +15,7 @@
   </thead>
   <tbody>
     <% @posts.each do |post|%>
-      <tr>
+      <tr class="row" , id="row-<%= post.id %>">
       <td><%= post.name %></td>
         <td><%= post.user_id %></td>
         <td><%= post.id %></td>
@@ -31,3 +33,4 @@
   </tbody>
 </table>
 <%#= render @posts %>
+<%#*</div>%>

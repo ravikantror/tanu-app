@@ -1,2 +1,1 @@
-$('#post').html("<%= j render(:partial => 'edit_post') %>");
-<%#*$(".new_post")[0].reset();%>
+$('#row-<%=@post.id %>').html("<%= j render(:partial => 'edit') %>");

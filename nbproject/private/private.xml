@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_edit.html.erb</file>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_edit_post.html.erb</file>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/index.html.erb</file>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_new_post.html.erb</file>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_post.html.erb</file>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/edit.js.erb</file>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_form.html.erb</file>
+            <file>file:/home/aman/Desktop/Tanusree/Rails_Application/SApp1/app/views/posts/_index_post.html.erb</file>
+        </group>
     </open-files>
 </project-private>

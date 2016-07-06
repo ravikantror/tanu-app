@@ -1,0 +1,44 @@
+<div class="container">
+
+<%= form_for @post,:url => post_path(@post),method: :post,:remote=> true do |s| %>
+ 
+ <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %> prohibited
+        this value from being saved:
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row">
+<div class="col-xs-12 form-group">
+  <%= s.label :Name,class: "control-label" %><br>
+  <%= s.text_field:name, class: "form-control" %>
+</div>
+</div>   
+
+<div class="row">
+ <div class="col-xs-12 form-group">
+  <%= s.label :Description %><br>
+  <%= s.text_area:des,class: "form-control" %>
+ </div>
+</div>    
+<div class="row">
+ <div class="col-xs-12 form-group">
+  <%= s.label :Post_Type %><br>
+  <%= s.select(:type,[["Default","Default"],["Public","Public"],["Only Me","Only Me"],["Friends","Friends"]]) %>  
+ </div>
+ </div>
+ <div class="row">
+ <div class="col-xs-12 form-group">
+ <%= s.submit:UpdatePosts,class: "action" %>
+ </div> 
+</div>     
+<% end %>
+    
+</div>    

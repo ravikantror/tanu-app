@@ -1,4 +1,4 @@
-$('#index_post').html("<%= j render(:partial => 'index_post') %>");
+$('#row-<%=@post.id %>').replaceWith('<%= j render(@post) %>');
 $('#post').html("");
 <%#*$('#show_post').html("");%>
 <%#*$('#edit_post').html("");%>
