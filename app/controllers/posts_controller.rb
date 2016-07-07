@@ -46,12 +46,16 @@ class PostsController < ApplicationController
  #end 
 
   def edit
-    @post=Post.find(params[:id])
+    @post=Post.find(params[:id]) 
   end
   def update
     @post=current_user.posts.find(params[:id])
 
     @post.update(post_params)
+#   $customer = Customer::findOne($id);
+#$customer->name = $name;
+#$customer->email = $email;
+#$customer->update();
       #redirect_to posts_path
     @posts=Post.all
     #where(:user_id=>current_user.id)

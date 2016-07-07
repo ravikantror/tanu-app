@@ -1,6 +1,6 @@
 <h1>Editing Posts</h1>
 
- <%= form_for @post,:url => post_path(@post),method: :post,:remote=> true do |s| %>
+ <%= form_for @post,:url=>{'action'=>'update'},method: :post,:remote=> true do |s| %>
  
  <% if @post.errors.any? %>
     <div id="error_explanation">
