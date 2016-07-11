@@ -1,5 +1,6 @@
+<div class="container">
 <h1>New Post</h1>
-<%= form_for :post, :url=>{'action'=>'create'},:remote => true do |f| %>
+<%= form_for :post, :url=>{'action'=>'create'},:remote => true,:class=>"form-horizontal" do |f| %>
 <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -13,10 +14,10 @@
       </ul>
     </div>
   <% end %>
-<p>
+<div class="form-group">
   <%= f.label :Name %><br>
   <%= f.text_field:name %>
-</p>
+</div>
 <p>
   <%= f.label :Description %><br>
   <%= f.text_area:des %>
@@ -25,8 +26,11 @@
   <%= f.label :Post_Type %><br>
   <%= f.select(:type,[["Default","Default"],["Public","Public"],["Only Me","Only Me"],["Friends","Friends"]]) %>  
 </p>
-<p>
+<p class="btn btn-primary">
+
  <%= f.submit %>
-</p>    
+
+</p>
 <% end %>
+</div>
 
